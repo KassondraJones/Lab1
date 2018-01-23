@@ -1,0 +1,102 @@
+import java.util.Scanner;
+
+public class Lab1 {
+
+	public static void main(String[] args) {
+		
+		// Initialize all variables
+		double length;
+		double width;
+		double height;
+		double perimeter;
+		double area;
+		double volume;
+		String userInput;
+		char userChoice;
+		boolean cont;
+		
+		//Introduce and prompt for initial user input
+		System.out.println("Welcome to Grand Circus' Room Detail Generator!");
+		System.out.println(" ");
+		
+		Scanner scnr = new Scanner(System.in);
+		
+		System.out.print("Enter Length: ");
+		length = scnr.nextDouble();
+		
+		System.out.print("Enter Width:  ");
+		width = scnr.nextDouble();
+		
+		System.out.print("Enter Height:  ");
+		height = scnr.nextDouble();
+		
+		//Set up math equations
+		area = length * width;
+		perimeter = (length * 2) + (width * 2);
+		volume = length * width * height;
+		
+		//Print answers to console
+		System.out.println("Area: " + area);
+		System.out.println("Perimeter: " + perimeter);
+		System.out.println("Volume: " + volume);
+		System.out.println(" ");
+		
+		//Ask if user would like to continue
+		System.out.print("Continue? (y/n): ");
+		
+		//Store input string and then string to char
+		userInput = scnr.next();
+	  userChoice = Character.toLowerCase(userInput.charAt(0));
+	    
+	  //Establish boolean conditions
+	  if (userChoice == 'y') {
+	      cont = true;
+	    }
+	  else {
+	      cont = false;
+	    }
+	    
+	    //Create while loop for true boolean
+	    //Is there a way to not re-type the initial code into the loop?
+	    while (cont == true) {
+  	    	System.out.println(" ");
+	  		  System.out.print("Enter Length: ");
+	  		  length = scnr.nextDouble();
+			
+		  	  System.out.print("Enter Width:  ");
+		  	  width = scnr.nextDouble();
+			
+		    	System.out.print("Enter Height:  ");
+			   height = scnr.nextDouble();
+			
+	    		area = length * width;
+  		  	perimeter = (length * 2) + (width * 2);
+		  	  volume = length * width * height;
+			
+	  	  	System.out.println("Area: " + area);
+		    	System.out.println("Perimeter: " + perimeter);
+		    	System.out.println("Volume:  " + volume);
+		    	System.out.println(" ");
+		    	System.out.print("Continue? (y/n): ");
+			
+			    userInput = scnr.next();
+		      userChoice = Character.toLowerCase(userInput.charAt(0));
+		    
+		      if (userChoice == 'y') {
+		         cont = true;
+		      }
+		      else {
+		       	cont = false;
+		      }
+			
+	    }
+	    
+	    //Output when user no longer wishes to continue
+	    System.out.println(" ");
+      System.out.println("Thank you for using Grand Circus' Room Detail Generator!");
+      System.out.println("Goodbye!");
+
+//Not sure why my formatting isn't copying accurately from Eclipse?
+	}
+
+}
